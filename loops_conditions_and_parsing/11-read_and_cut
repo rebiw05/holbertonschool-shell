@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#comment
+IFS=":"
+while read -r username _ uid _ _ home_directory _ ; do
+	 printf "%s:%s:%s\n" "$username" "$uid" "$home_directory"
+ done < "/etc/passwd"
