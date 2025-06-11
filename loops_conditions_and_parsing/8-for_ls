@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#comment
+for item in *; do 
+display_name="${item#*-}"
+printf "%s\n" "$display_name"
+done
