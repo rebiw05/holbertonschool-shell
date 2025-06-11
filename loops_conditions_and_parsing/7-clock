@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#comment
+hour=0
+while [ "$hour" -le 12 ]; do
+	printf "Hour: %d\n" "$hour"
+	minute=1
+	while [ "$minute" -le 59 ]; do
+		printf "%d\n" "$minute"
+		minute=$((minute+1))
+	done
+	hour=$((hour+1))
+done
