@@ -1,18 +1,4 @@
 #!/usr/bin/env bash
-# 67-stop_me_if_you_can: This script attempts to stop the '7-highlander' process
-TARGET_PROCESS="7-highlander"
-echo "Attempting to stop '$TARGET_PROCESS' process..."
-pkill -f "$TARGET_PROCESS"
-if [ $? -eq 0 ]; then
-    echo "Termination signal sent to '$TARGET_PROCESS'."
-    echo "Note: '$TARGET_PROCESS' is designed to be invincible to SIGTERM, so it will display 'I am invincible!!!' but may not terminate."
-    echo "You might need to use 'pkill -9 -f \"$TARGET_PROCESS\"' to forcefully terminate it."
-    sleep 1
-    if pgrep -f -q "$TARGET_PROCESS"; then
-        echo "The '$TARGET_PROCESS' process is still active after receiving SIGTERM."
-    else
-        echo "The '$TARGET_PROCESS' process was not found, or it finally terminated."
-    fi
-else
-    echo "Error: '$TARGET_PROCESS' process not found or could not be signaled."
-fi
+#comment
+PID=$(pgrep -f "7-highlander")
+pkill -f "$PID"
