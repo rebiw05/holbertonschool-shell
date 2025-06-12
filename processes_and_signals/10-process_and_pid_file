@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#comment
+count=0
+PID=$(grep -f "/var/run/myscript.pid")
+echo "$PID" > /var/run/myscript.pid
+for count in *; do 
+	echo "To infinity and beyond"
+	count=$((count+1))
+done
+trap 'echo "I hate the kill command"; exit 0' SIGTERM 
