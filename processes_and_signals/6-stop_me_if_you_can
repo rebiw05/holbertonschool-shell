@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#comment
+PID=$(pgrep -f "4-to_infinity_and_beyond")
+if [ -z "$PID" ]; then 
+	echo "error: this process not found"
+else 
+	pkill "$PID"
+fi
