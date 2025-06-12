@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#listing just lines  that contains bash
+ps auxH | grep "bash"
