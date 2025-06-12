@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#using sleep
+count=0
+for count in *; do
+	echo "To infinity and beyond"
+	sleep 2
+	count=$((count+1))
+done
