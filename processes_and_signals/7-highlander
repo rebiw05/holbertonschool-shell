@@ -6,3 +6,4 @@ for count in *; do
 	sleep 2
 	count=$((count+1))
 done
+trap 'echo "I am invincible!!!"; exit 0' SIGTERM
