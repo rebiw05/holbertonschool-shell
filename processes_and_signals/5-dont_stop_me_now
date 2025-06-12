@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#comment
+PID=$(pgrep -f "4-to_infinity_and_beyond")
+if [ -z "$PID" ]; then
+    echo "Error: '4-to_infinity_and_beyond' process not found."
+else
+	kill "$PID"
+fi
